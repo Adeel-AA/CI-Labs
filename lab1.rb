@@ -59,7 +59,31 @@ class Lab1
   end
 
   def self.two_opt_neighbourhood(route)
-    random_route = route.shuffle
+    route = route
+
+    count = 0
+    swap = []
+
+    while count < route.length
+      route.each_with_index do |element, index|
+        if route[index] == index.next
+          route[index] = element.next
+          route[index.next] = element
+          swap.push(route)
+          binding.pry
+          count += 1
+        end
+        swap
+      end
+
+    end
+
+
+    # route[0], route[1] = route[1], route[0]
+    # route
+    # second_swap = route[0], route[2] = route[2], route[0]
+    # third_swap = route[0], route[3] = route[3], route[0]
+
 
   end
 
@@ -148,8 +172,8 @@ class Lab1
 
   end
 
-  random_search_time_based([A, B, C, D], 20)
-
+  # random_search_time_based([A, B, C, D], 20)
+  two_opt_neighbourhood([1, 2, 3, 4])
   # csv_matrix
 
 
