@@ -78,6 +78,8 @@ class Lab1
 
     end
 
+    # nested loop
+
 
     # route[0], route[1] = route[1], route[0]
     # route
@@ -145,19 +147,20 @@ class Lab1
   # route1 = [A, C, B, D]
   # get_cost_of_route(route1)
 
-  # def self.csv_matrix
-  #   matrix = csv_problem_instance
-  #
-  #   matrix.each do |element|
-  #
-  #   end
-  #
-  #   # @graph = Matrix.rows(@graph.to_a << [1,2,3,4])
-  #   # csv_matrix = Matrix.rows(csv_matrix << matrix)
-  #
-  #
-  #   # csv_matrix = Matrix.build(csv_problem_instance.length) {csv_problem_instance.each {|e|  e}}
-  # end
+  def self.csv_matrix
+    matrix = csv_problem_instance
+
+    matrix.each do |element|
+      binding.pry
+
+    end
+
+    # @graph = Matrix.rows(@graph.to_a << [1,2,3,4])
+    # csv_matrix = Matrix.rows(csv_matrix << matrix)
+
+
+    # csv_matrix = Matrix.build(csv_problem_instance.length) {csv_problem_instance.each {|e|  e}}
+  end
 
   def self.euclid(x_city_a, x_city_b, y_city_a, y_city_b)
     first_brackets = (x_city_b - x_city_a) ** 2
@@ -172,9 +175,9 @@ class Lab1
 
   end
 
-  # random_search_time_based([A, B, C, D], 20)
-  two_opt_neighbourhood([1, 2, 3, 4])
+  random_search_time_based([A, B, C, D], 60)
+  # two_opt_neighbourhood([1, 2, 3, 4])
   # csv_matrix
-
+# generate_routes
 
 end
